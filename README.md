@@ -23,8 +23,9 @@ This project is a Node.js application that uses `face-api.js` for face recogniti
 
 Clone the repository to your local machine:
 
+Then run the following
+
 ```bash
-git clone https://github.com/sunilksamanta/face-recognize-api-nodejs.git
 cd face-recognize-api
 npm i
 ```
