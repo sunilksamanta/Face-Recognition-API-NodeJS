@@ -45,7 +45,7 @@ app.post('/upload', upload.single('image'), async (req, res) => {
 
     
     await face.save();
-    res.send('Face registered.');
+    res.json({ message: 'Face registered successfully for ' + req.body.name });
   } catch (error) {
     console.error(error);
     res.status(500).send(error.message);
@@ -89,7 +89,7 @@ app.post('/recognize', upload.single('image'), async (req, res) => {
 });
 
 // Server start
-const PORT = 3100;
+const PORT = 3100 || process.env.PORT;
 app.listen(PORT, () => {
   console.log(`Server running on port ${PORT}`);
 });
