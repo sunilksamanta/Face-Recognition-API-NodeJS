@@ -29,6 +29,32 @@ Then run the following
 cd face-recognize-api
 npm i
 ```
+Create an `.env` file in the root of the project and put the `MONGODB_URI` inside that
 
+```bash
+MONGODB_URI=mongodb://localhost:27017/face_recog
+PORT=5000
+```
 
+## Request
 
+### Create User with Image
+
+```bash
+METHOD: POST
+URI: http://localhost:5000/upload
+BODY TYPE: Formdata
+FIELDS:
+  name   : String
+  image  : File
+```
+
+### Recognize User
+
+```bash
+METHOD: POST
+URI: http://localhost:5000/recognize
+BODY TYPE: Formdata
+FIELDS:
+  image  : File
+```
