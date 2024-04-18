@@ -23,10 +23,11 @@ This project is a Node.js application that uses `face-api.js` for face recogniti
 
 Clone the repository to your local machine:
 
+Go to the project directory
+
 Then run the following
 
 ```bash
-cd face-recognize-api
 npm i
 ```
 Create an `.env` file in the root of the project and put the `MONGODB_URI` inside that
